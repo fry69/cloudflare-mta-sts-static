@@ -14,7 +14,7 @@ Static assets are a new Cloudflare feature, see [documentation](https://develope
 
 - [Node.js](https://nodejs.org/) (version 18 or later)
 - [Wrangler CLI](https://developers.cloudflare.com/workers/cli-wrangler/install-update) (version 3 or later)
-- A Cloudflare account with Workers enabled
+- A Cloudflare account
 
 ## Installation
 

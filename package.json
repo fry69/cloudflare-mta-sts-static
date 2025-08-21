@@ -1,13 +1,14 @@
 {
   "name": "mta-sts-static",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "deploy": "wrangler deploy",
     "dev": "wrangler dev",
-    "start": "wrangler dev"
+    "start": "wrangler dev",
+    "cf-typegen": "wrangler types"
   },
   "devDependencies": {
-    "wrangler": "^3.78.5"
+    "wrangler": "^4.31.0"
   }
 }

@@ -26,7 +26,7 @@ Static assets are a new Cloudflare feature, see [documentation](https://develope
 
 2. Install dependencies:
    ```
-   npm install
+   pnpm install
    ```
 
 3. Configure your Cloudflare account in Wrangler:
@@ -34,27 +34,33 @@ Static assets are a new Cloudflare feature, see [documentation](https://develope
    wrangler login
    ```
 
-4. Optionally update the `wrangler.toml` file with your custom domains:
-   ```
-   routes = [
-     { pattern = "mta-sts.example1.com", custom_domain = true },
-     { pattern = "mta-sts.example2.com", custom_domain = true }
-   ]
+4. Update the `wrangler.jsonc` file with your custom domain(s):
+   ```json
+  "routes": [
+    {
+      "pattern": "mta-sts.example1.com",
+      "custom_domain": true
+    },
+    {
+      "pattern": "mta-sts.example2.com",
+      "custom_domain": true
+    }
+  ]
    ```
 
 ## Usage
 
 1. Develop and test locally:
    ```
-   npm run dev
+   pnpm run dev
    ```
 
 2. Deploy to Cloudflare Workers:
    ```
-   npm run deploy
+   pnpm run deploy
    ```
 
-3. Add a custom domain in your Cloudflare dashboard to direct traffic to this asset only worker or add custom domains in `wrangler.toml` as described above.
+3. Add a custom domain in your Cloudflare dashboard to direct traffic to this asset only worker or add custom domains in `wrangler.jsonc` as described above.
 
 ## Customization
 
